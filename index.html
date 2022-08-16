@@ -19,13 +19,14 @@
             <h1>LOGIN</h1>
             <div class="textfield">
                 <label for="usuario">Usuário:</label>
-                <input type="text" name="usuario" placeholder="Usuário">
+                <input type="text" name="usuario"  id="login">
             </div>
             <div class="textfield">
                 <label for="senha">Senha:</label>
-                <input type="password" name="senha" placeholder="Senha">
+                <input type="password" name="senha"  id="senha">
+                
             </div>
-            <button class="btn-login">Login</button>
+            <button  onclick="logar()"; return false  class="btn-login">Login</button>
 
         </div>
 
@@ -33,6 +34,35 @@
 
 </div>
 
+    <script>
+
+
+function logar(){
+
+var login = document.getElementById('login').value;
+var senha = document.getElementById('senha').value;
+
+
+/*validação*/
+
+if(login == "admin" && senha == "admin"){
+    alert('sucesso');
+
+    location.href = "home.html";
+
+
+} else{
+    alert('Usuário ou senha incorretos');
+}
+
+
+
+}
+
+
+
+
+    </script>
 
     
 </body>
